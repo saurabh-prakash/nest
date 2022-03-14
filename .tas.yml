@@ -1,0 +1,17 @@
+---
+framework: mocha
+preRun:
+     command:
+        - npm ci
+        - npm run build
+preMerge:
+  pattern:
+    - "./packages/**/*.spec.ts"
+postMerge:
+  pattern: 
+    - "./packages/**/*.spec.ts"
+postRun:
+     command:
+        - node --version
+configFile: mocharc.yml
+version: 1.0
