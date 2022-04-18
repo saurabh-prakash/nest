@@ -225,5 +225,9 @@
     ],
     "sourceMap": true,
     "instrument": true
+  },
+  "mocha": {
+    "require": ["ts-node/register", "node_modules/reflect-metadata/Reflect.js", "rootHook.ts"],
+    "exit": true
   }
 }
